@@ -1,0 +1,6 @@
+add_executable(2-1 2-1.c)
+add_executable(2-2 2-2.c)
+add_executable(2-3 2-3.c)
+add_executable(2-4 2-4.c)
+add_executable(ex2-1 ex2-1.c)
+add_executable(ex2-4 ex2-4.c)
