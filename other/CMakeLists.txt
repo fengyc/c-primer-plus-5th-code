@@ -1,3 +1,5 @@
+add_subdirectory(poj)
+
 add_executable(kmp kmp.c)
 add_executable(dijkastra dijkastra.c)
 add_executable(floyd floyd.c)
@@ -9,9 +11,3 @@ add_executable(qsort sort/qsort.c)
 add_executable(select_sort sort/select_sort.c)
 add_executable(heap_sort sort/heap_sort.c)
 add_executable(merge_sort sort/merge_sort.c)
-
-add_executable(poj-1001 poj-1001.c)
-add_executable(poj-1002 poj-1002.cpp)
-add_executable(poj-1002-2 poj-1002-2.c)
-add_executable(poj-1003 poj-1003.c)
-add_executable(poj-1004 poj-1004.c)
