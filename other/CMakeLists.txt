@@ -11,3 +11,6 @@ add_executable(qsort sort/qsort.c)
 add_executable(select_sort sort/select_sort.c)
 add_executable(heap_sort sort/heap_sort.c)
 add_executable(merge_sort sort/merge_sort.c)
+
+add_executable(teststr test.c)
+add_executable(testkk testkk.cpp)
