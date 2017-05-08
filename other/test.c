@@ -30,7 +30,7 @@ void printMaxK(char *s)
         // 首个位置，确定从 s[0] 还是 s[0]-1 开始
         flag = 0;
         if (len >=2 ){
-            if ((s[0]-'0')*(s[1]-'0') < (pad_min[s[0]-'0'-1]))
+            if ((s[0]-'0')*10 + (s[1]-'0') < (pad_min[s[0]-'0'-1]))
             {
                 flag = 1;
                 i = (s[0]-'0'-2)/3;
@@ -43,18 +43,23 @@ void printMaxK(char *s)
         s++;
         while (s[0]!=0){
             if (flag) {
-                printf("9");
+                if (i==3 && j==1)
+                    printf("0");
+                else
+                    printf("9");
             }
             // 找一个最近的数
             else{
                 min_delta = -99;
-                for (k=i; k < 3; k++){
-                    for (l=j;l<4;l++) {
-                        delta = (s[0]-'a') - pad[i][j];
-                        if (min_delta < 0 || (delta >=0 && delta < min_delta)) {
-                            min_delta = delta;
-                            m=k;
-                            n=l;
+                for (k=i; k < 4; k++){
+                    for (l=j;l<3;l++) {
+                        if (pad[k][l] >= 0) {
+                            delta = (s[0] - '0') - pad[k][l];
+                            if (min_delta < 0 || (delta >= 0 && delta < min_delta)) {
+                                min_delta = delta;
+                                m = k;
+                                n = l;
+                            }
                         }
                     }
                 }
